@@ -1,5 +1,6 @@
 import math
 import time
+import random
 
 def faktoriziraj(n):
     # Število n faktorizira na princip iščemo tak t, da bo
@@ -27,7 +28,17 @@ def fermat(list):
             list.append(y)
     return prafaktorji
 
-	
-print(fermat([85667124734235919999.0]))
+
+def generiraj_veliko_število(n):
+    # generira naključno število z n števkami
+    
+    x = 0
+    for i in range(n):
+        x += random.randrange(10) * 10**i
+    return x
+
+
+x = generiraj_veliko_število(3)
+print(fermat([x]))
 
 print(time.process_time())

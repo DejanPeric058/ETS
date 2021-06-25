@@ -32,6 +32,6 @@ def najvecje_stevilo_korakov(n):
         i = max(i,y)
     return i
 
-# domnevajmo kako izgleda funkcija za to, in potem izračunamo integral od 0 do 10**20
+
 
     
