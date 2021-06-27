@@ -6,7 +6,7 @@ def fundamentalna_resitev(n):
     m = math.sqrt(n)
     x = int(m)
     if x == m:
-        return 1, 0
+        return 'Ni rešitve'
     y, z, r = 0, 1, x
     e1, e2 = 1, 0
     f1, f2 = 0, 1
@@ -32,7 +32,10 @@ def absolutna_vrednost(a, b):
     return math.sqrt(a * a + b * b)
 
 x, y, z = [], [], [] 
-for d in range(2, 1000, 2):
+for d in range(2, 1000):
+    a = math.sqrt(d)
+    if math.floor(a) == a:
+        continue
     x.append(d)
     e, f = fundamentalna_resitev(d)
     s = math.floor(absolutna_vrednost(e, f))

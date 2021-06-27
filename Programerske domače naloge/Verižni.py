@@ -18,27 +18,29 @@ def verizni(a, b, c):
     d = b * c * c
     n = math.sqrt(d)
     a = (p + n) // q
-    list1 = [(p,q)]
+    set1 = {(p,q)}
     list2 = [int(a)]
+    list1 = [(p,q)]
     while True:
         p = q * a - p
         q = (d - p * p) // q
         a = (p + n) // q
-        if (p, q) in list1:
-            perioda = len(list1) - list1.index((p, q))
+        if (p, q) in set1:
+            perioda = len(set1) - list1.index((p, q))
             return list2, perioda
-        list1.append((p, q))
+        set1.add((p, q))
         list2.append(int(a))
+        list1.append((p,q))
 
 def generiraj_veliko_število(n):
-    # generira naključno število z desetimi števkami
+    # generira naključno število z n-timi števkami
     
     x = 0
     for i in range(n):
         x += random.randrange(10) * 10**i
     return x
 
-x = generiraj_veliko_število(5)
+x = generiraj_veliko_število(15)
 print(verizni(0, x, 1))
 print(time.process_time())
 
