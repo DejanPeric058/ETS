@@ -44,6 +44,7 @@ for d in range(2, 1000):
     #print(str(d) + ', ' + str(s))
 
 plt.plot(x, y)
+plt.yscale('log')
 plt.show()
     
 plt.plot(x, z)

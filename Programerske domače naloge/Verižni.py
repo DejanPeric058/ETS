@@ -40,7 +40,7 @@ def generiraj_veliko_število(n):
         x += random.randrange(10) * 10**i
     return x
 
-x = generiraj_veliko_število(15)
+x = generiraj_veliko_število(10)
 print(verizni(0, x, 1))
 print(time.process_time())
 

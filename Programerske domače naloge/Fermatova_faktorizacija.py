@@ -30,14 +30,14 @@ def fermat(n):
 		n //= 2
 		dvojke.append(2)
 	prafaktorji = [n]
-	list = []
+	list1 = []
 	for a in prafaktorji:
 		x, y = faktoriziraj(a)
 		if y != 1:
 			prafaktorji.append(x)
 			prafaktorji.append(y)
-			list.append(a)
-	for j in list:
+			list1.append(a)
+	for j in list1:
 		prafaktorji.remove(j)
 	prafaktorji += dvojke
 	return prafaktorji
@@ -52,18 +52,18 @@ def generiraj_veliko_število(n):
 	return x
 
 
-#x = generiraj_veliko_število(10)
-#for i in range(10**9,10**9 + 100):
-#	faktorji = fermat(i)
-#	niz = str(i) + ' = ' + str(faktorji[0])
-#	for s in faktorji[1:]:
-#		niz += ' * ' + str(s)
-#	print(niz)
-#print(x)
-#faktorji = fermat(x)
-#niz = str(x) + ' = ' + str(faktorji[0])
-#for s in faktorji[1:]:
-#	niz += ' * ' + str(s)
-#print(niz)
+x = generiraj_veliko_število(10)
+for i in range(10**9,10**9 + 100):
+	faktorji = fermat(i)
+	niz = str(i) + ' = ' + str(faktorji[0])
+	for s in faktorji[1:]:
+		niz += ' * ' + str(s)
+	print(niz)
+print(x)
+faktorji = fermat(x)
+niz = str(x) + ' = ' + str(faktorji[0])
+for s in faktorji[1:]:
+	niz += ' * ' + str(s)
+print(niz)
 
 print(time.process_time())
