@@ -53,7 +53,7 @@ def generiraj_veliko_število(n):
 
 
 x = generiraj_veliko_število(10)
-for i in range(10**9,10**9 + 100):
+for i in range(10**9,10**9):
 	faktorji = fermat(i)
 	niz = str(i) + ' = ' + str(faktorji[0])
 	for s in faktorji[1:]:
